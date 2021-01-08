@@ -134,4 +134,7 @@ body {
     text-align: center;
 }
 
-
+.button-group{
+    display: flex;
+    justify-content: space-around;
+}

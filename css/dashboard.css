@@ -152,4 +152,9 @@ table{
 .qty-addtocart-group input{
     color: lightgray;
 }
-
+.total-cost{
+    display: flex;
+    justify-content: space-between;
+    padding-right: 30px;
+    color: red;
+}

@@ -144,3 +144,12 @@ table{
 .combo-box{
     margin-bottom: 20px;
 }
+.qty-addtocart-group{
+    justify-content: flex-end;
+    padding-right: 30px;
+}
+
+.qty-addtocart-group input{
+    color: lightgray;
+}
+

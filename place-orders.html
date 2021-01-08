@@ -93,16 +93,51 @@
             </div>
         </nav>
 
-        <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
+        <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4 row">
 
-            <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+            <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom col-12">
                 <h1 class="h2">Place Order</h1>
             </div>
+            <!--Add combo box and non editable fields to select  and show Customer-->
 
+            <div class="col-12 row combo-box">
+                <select class="form-select col-3" aria-label="Default select example" id="customer_id" name="customer_id">
+                    <option selected>Customer Id</option>
+                    <option value="1">C001</option>
+                    <option value="2">C002</option>
+                    <option value="3">C003</option>
+                </select>
+                <div class="col-3">
+                    <input type="text" name="customer_id" class="form-control" id="customer_name" value="Name"  disabled>
+                </div>
+                <div class="col-3">
+                    <input type="text" name="customer_id" class="form-control" id="customer_address" value="Address"  disabled>
+                </div>
+                <div class="col-3">
+                    <input type="text" name="customer_id" class="form-control" id="customer_salary" value="Salary"  disabled>
+                </div>
+            </div>
 
+            <div class="col-12 row">
+                <select class="form-select col-3" aria-label="Default select example" id="item_code" name="customer_id">
+                    <option selected>Item Code</option>
+                    <option value="1">C001</option>
+                    <option value="2">C002</option>
+                    <option value="3">C003</option>
+                </select>
+                <div class="col-3">
+                    <input type="text" name="customer_id" class="form-control" id="description" value="Description"  disabled>
+                </div>
+                <div class="col-3">
+                    <input type="text" name="customer_id" class="form-control" id="qtyOnHand" value="Qty On Hand"  disabled>
+                </div>
+                <div class="col-3">
+                    <input type="text" name="customer_id" class="form-control" id="unitPrice" value="Unit Price"  disabled>
+                </div>
+            </div>
 
             <!--Add Customer Table-->
-            <br>
+          <!--  <br>
             <h2>Customer Detail</h2>
             <br>
 
@@ -135,7 +170,7 @@
                     <td>30000</td>
                 </tr>
                 </tbody>
-            </table>
+            </table>-->
         </main>
     </div>
 </div>

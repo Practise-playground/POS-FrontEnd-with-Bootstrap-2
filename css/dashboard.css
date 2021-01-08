@@ -138,3 +138,6 @@ body {
     display: flex;
     justify-content: space-around;
 }
+table{
+    text-align: center;
+}

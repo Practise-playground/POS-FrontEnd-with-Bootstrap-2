@@ -161,7 +161,7 @@ table{
 }
 
 @media all and (max-width: 575px){
-    .button-group{ 
+    .button-group{
         margin-bottom: 20px;
     }
 }

@@ -1,10 +1,217 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+    <meta content="" name="description">
+    <meta content="DEP" name="author">
+    <title>POS Web Frontend</title>
+
+
+    <!-- Bootstrap core CSS -->
+    <link crossorigin="anonymous" href="node_modules/bootstrap/dist/css/bootstrap.min.css"
+          integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" rel="stylesheet">
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            -webkit-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="css/dashboard.css" rel="stylesheet">
 </head>
 <body>
+<nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
+    <a class="navbar-brand col-md-3 col-lg-2 mr-0 px-3" href="#">WEB POS</a>
+    <button aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation"
+            class="navbar-toggler position-absolute d-md-none collapsed" data-target="#sidebarMenu"
+            data-toggle="collapse" type="button">
+        <span class="navbar-toggler-icon"></span>
+    </button>
 
-</body>
+
+</nav>
+
+<div class="container-fluid">
+    <div class="row">
+        <nav class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse" id="sidebarMenu">
+            <div class="sidebar-sticky pt-3">
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link " href="index.html">
+                            <svg class="bi bi-house-door" fill="currentColor" height="16" viewBox="0 0 16 16"
+                                 width="16" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5z"/>
+                            </svg>
+                            Dashboard
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="manage-customers.html">
+                            <svg class="bi bi-people-fill" fill="currentColor" height="16" viewBox="0 0 16 16"
+                                 width="16" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                                <path d="M5.216 14A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216z"
+                                      fill-rule="evenodd"/>
+                                <path d="M4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z"/>
+                            </svg>
+                            Manage Customers
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="manage-items.html">
+                            <svg class="bi bi-list-check" fill="currentColor" height="16" viewBox="0 0 16 16"
+                                 width="16" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM3.854 2.146a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708L2 3.293l1.146-1.147a.5.5 0 0 1 .708 0zm0 4a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708L2 7.293l1.146-1.147a.5.5 0 0 1 .708 0zm0 4a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 0 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0z"
+                                      fill-rule="evenodd"/>
+                            </svg>
+                            Manage Items
+                        </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link " href="place-orders.html">
+                            <svg class="bi bi-cart-check-fill" fill="currentColor" height="16" viewBox="0 0 16 16"
+                                 width="16" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm-1.646-7.646l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L8 8.293l2.646-2.647a.5.5 0 0 1 .708.708z"/>
+                            </svg>
+                            Place Orders
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="search-orders.html">
+                            <svg class="bi bi-search" fill="currentColor" height="16" viewBox="0 0 16 16"
+                                 width="16" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                            </svg>
+                            Search Orders <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+        </nav>
+
+        <main class="col-md-9 ml-sm-auto col-lg-10 px-md-4 row" role="main">
+
+            <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom col-12">
+                <h1 class="h2">Search Order</h1>
+            </div>
+
+            <!-- Add Order Cart Table-->
+            <br>
+            <h2>Orders</h2>
+            <br>
+            <table class="table table-dark table-striped">
+                <thead>
+                <tr>
+                    <th scope="col">Item Code</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Qty</th>
+                    <th scope="col">Unit Price</th>
+                    <th scope="col">Cost</th>
+                    <th scope="col">Operate</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row">I001</th>
+                    <td>Bread</td>
+                    <td>5</td>
+                    <td>60</td>
+                    <td>300</td>
+                    <td>
+                        <button class="btn btn-outline-light btn-sm" type="button">Delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">I002</th>
+                    <td>Tea Packet</td>
+                    <td>2</td>
+                    <td>250</td>
+                    <td>500</td>
+                    <td>
+                        <button class="btn btn-outline-light btn-sm" type="button">Delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">I003</th>
+                    <td>Dhal</td>
+                    <td>2kg</td>
+                    <td>75</td>
+                    <td>150</td>
+                    <td>
+                        <button class="btn btn-outline-light btn-sm" type="button">Delete</button>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+
+            <!-- Add Order Detail Table-->
+            <br>
+            <h2>Order Details</h2>
+            <br>
+            <table class="table table-dark table-striped">
+                <thead>
+                <tr>
+                    <th scope="col">Item Code</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Qty</th>
+                    <th scope="col">Unit Price</th>
+                    <th scope="col">Cost</th>
+                    <th scope="col">Operate</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row">I001</th>
+                    <td>Bread</td>
+                    <td>5</td>
+                    <td>60</td>
+                    <td>300</td>
+                    <td>
+                        <button class="btn btn-outline-light btn-sm" type="button">Delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">I002</th>
+                    <td>Tea Packet</td>
+                    <td>2</td>
+                    <td>250</td>
+                    <td>500</td>
+                    <td>
+                        <button class="btn btn-outline-light btn-sm" type="button">Delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">I003</th>
+                    <td>Dhal</td>
+                    <td>2kg</td>
+                    <td>75</td>
+                    <td>150</td>
+                    <td>
+                        <button class="btn btn-outline-light btn-sm" type="button">Delete</button>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+
+        </main>
+    </div>
+</div>
+<script crossorigin="anonymous" src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script crossorigin="anonymous" src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.9.0/feather.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+
 </html>
